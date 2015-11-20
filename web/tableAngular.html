@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="tableApp">
+  <head>
+    <title>Angular</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  </head>
+  <body ng-controller="mainController as mainCtrl">
+    <div class="container">
+      <h2>Angular table</h2>
+      <table class="table table-bordered">
+        <tr>
+          <th></th>
+          <th>Email</th>
+          <th>Age</th>
+          <th>Eye Color</th>
+          <th>N. of friends</th>
+        </tr>
+        <tr ng-repeat="member in mainCtrl.members">
+          <td ng-bind="member.name"></td>
+          <td ng-bind="member.email"></td>
+          <td ng-bind="member.age"></td>
+          <td ng-bind="member.eyeColor"></td>
+          <td ng-bind="member.friends.length"></td>
+        </tr>
+      </table>
+      <a href='index.html'>Back</a>
+    </div>
+  </body>
+</html>
